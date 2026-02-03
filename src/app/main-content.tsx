@@ -37,7 +37,7 @@ export function MainContent({ user, project }: MainContentProps) {
     <FileSystemProvider initialData={project?.data}>
       <ChatProvider projectId={project?.id} initialMessages={project?.messages}>
         <div className="h-screen w-screen overflow-hidden bg-neutral-50">
-          <ResizablePanelGroup direction="horizontal" className="h-full">
+          <ResizablePanelGroup direction="horizontal" className="h-full" id="main-panel-group">
             {/* Left Panel - Chat */}
             <ResizablePanel defaultSize={35} minSize={25} maxSize={50}>
               <div className="h-full flex flex-col bg-white">
@@ -84,6 +84,7 @@ export function MainContent({ user, project }: MainContentProps) {
                     <ResizablePanelGroup
                       direction="horizontal"
                       className="h-full"
+                      id="code-panel-group"
                     >
                       {/* File Tree */}
                       <ResizablePanel

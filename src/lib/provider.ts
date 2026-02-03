@@ -8,7 +8,7 @@ import {
 const MODEL = "claude-haiku-4-5";
 
 export class MockLanguageModel implements LanguageModelV1 {
-  readonly specificationVersion = "v1" as const;
+  readonly specificationVersion = "v2" as const;
   readonly provider = "mock";
   readonly modelId: string;
   readonly defaultObjectGenerationMode = "tool" as const;
